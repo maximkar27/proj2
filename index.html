@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+        //Передача по ссылке(зависимая копия объекта)
+
+        let user = { name: "Vasia" };
+        let admin = user;
+
+        admin.name = "Petia";
+
+        alert(`Имя в User: ${user.name}`);
+        alert(`Имя в Admin: ${admin.name}`);
+
+        admin.age = 35;
+
+        alert(`${user.age} ${admin.age}`);
+
+
+    </script>
+
+    <script>
+
+
+        //Клонирование объекта
+
+        let user1 = {
+            name: "Вася",
+            age: 67
+        };
+
+        let clone = {};
+        for (let key in user1) {
+            clone[key] = user1[key];
+            alert(` Clone: ${clone[key]} 
+            user1: ${user1[key]}`)
+        };
+        clone.name = "Петя";
+        alert(`clone: ${clone.name} 
+            user1: ${user1.name}`);
+
+ 
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
